@@ -1,0 +1,18 @@
+#lang racket
+(define (identity x) x)
+(define (inc x) (+ x 1))
+(define (abs x)
+  (if (< x 0)
+      (- x)
+      x))
+(define (avg x y) (/ (+ x y) 2))
+(define (close-enough? v1 v2 tolerance)
+  (< (abs (- v1 v2)) tolerance))
+(define (cube x) (* x x x))
+
+(provide identity)
+(provide inc)
+(provide abs)
+(provide avg)
+(provide close-enough?)
+(provide cube)
